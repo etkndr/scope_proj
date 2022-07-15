@@ -9,8 +9,20 @@ arrowAvgValue([10, 20]); // => 15
 arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
+let arrowAvgValue = (array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++){
+    sum = sum + array[i];
 
-// your code here!
+  }
+  
+  let total  = sum / array.length;
+console.log (total);
+  return total;
+}
+arrowAvgValue([10, 20]); // => 15
+arrowAvgValue([2, 3, 7]); // => 4
+arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
