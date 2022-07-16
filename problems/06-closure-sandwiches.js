@@ -20,12 +20,10 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 ***********************************************************************/
 function sandwichMaker() {
   let str = "One sandwich with tomato"
-  return function toppings(food) {
-    str = str + " and " + food
-    return str
+  function addToSand(topping) {
+    return str = str + " and " + topping
   }
-  console.log(toppings)
-
+  return addToSand
 }
 
 

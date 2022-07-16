@@ -28,8 +28,22 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
+function countDownTimer(n) {
+  let count = n
+  if (count !== 0) {
+    return function(func) {
+      return count = count - 1
+    }
+  }
+ else {
+  console.log("Happy New Year!")
+ }
+}
 
+let threeDays = countDownTimer(3); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

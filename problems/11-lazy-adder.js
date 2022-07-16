@@ -5,6 +5,7 @@ is invoked it will again accept a number, (secondNum), and then return a functio
 When the last mentioned function is invoked with a number, (thirdNum), it will
 FINALLY return a number. See below for examples!
 
+
 Example 1:
 let firstAdd = lazyAdder(1);
 let secondAdd = firstAdd(2);
@@ -21,8 +22,22 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Explain, but don't code, how you would turn your solution into a one-line
   fat-arrow function
 ***********************************************************************/
+// take in num, output func
+// closure take in num2
+// repeat three times, retun final num
 
-// your code here
+function lazyAdder(num1) {
+  return function(num2) {
+    return function(num3) {
+      return num1 + num2 + num3
+    }
+  }
+}
+
+let func1 = lazyAdder(10);
+let func2 = func1(20);
+let total = func2(3);
+console.log(total); // prints 33
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
