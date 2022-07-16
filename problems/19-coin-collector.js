@@ -24,9 +24,20 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
+function coinCollector(numCoins) {
+      let arr = []
+  for (i = 0; i < numCoins; i++) {
+  return function(coinVal) {
+    arr.push(coinVal)
+    return arr
+  }
+}
+}
 
-// your code here
-
+let threeCoins = coinCollector(3); // returns a function
+threeCoins(25); // returns a function
+threeCoins(5); // returns a function
+console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
